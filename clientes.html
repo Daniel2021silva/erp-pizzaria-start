@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes | ERP Pizzaria Start</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      🍕 ERP Start
+    </div>
+
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="cozinha.html">Cozinha</a>
+      <a href="estoque.html">Estoque</a>
+      <a href="caixa.html">Caixa</a>
+      <a class="active" href="clientes.html">Clientes</a>
+    </nav>
+
+    <button onclick="sairSistema()" class="logout-btn">
+      Sair
+    </button>
+
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div>
+        <h1>Clientes</h1>
+        <p>Cadastro e gerenciamento de clientes</p>
+      </div>
+    </header>
+
+    <section class="form-panel">
+
+      <h2>Novo Cliente</h2>
+
+      <form id="clienteForm" class="erp-form">
+
+        <div class="form-grid">
+
+          <div>
+            <label>Nome</label>
+            <input type="text" id="clienteNome" required>
+          </div>
+
+          <div>
+            <label>Telefone</label>
+            <input type="text" id="clienteTelefone">
+          </div>
+
+          <div>
+            <label>Bairro</label>
+            <input type="text" id="clienteBairro">
+          </div>
+
+          <div>
+            <label>Endereço</label>
+            <input type="text" id="clienteEndereco">
+          </div>
+
+        </div>
+
+        <div>
+          <label>Observações</label>
+
+          <textarea
+            id="clienteObs"
+            placeholder="Ex: prefere sem cebola"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="primary-btn">
+          Cadastrar Cliente
+        </button>
+
+      </form>
+
+    </section>
+
+    <section class="panel">
+
+      <div class="panel-header">
+        <h2>Clientes cadastrados</h2>
+      </div>
+
+      <div id="listaClientes" class="clientes-grid"></div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/clientes.js"></script>
+<script src="js/mobile.js"></script>
+
+</body>
+</html>

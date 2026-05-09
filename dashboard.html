@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ERP Pizzaria Start</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">🍕 ERP Start</div>
+
+      <nav>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="cozinha.html">Cozinha</a>
+        <a href="estoque.html">Estoque</a>
+        <a href="caixa.html">Caixa</a>
+        <a href="clientes.html">Clientes</a>
+      </nav>
+
+      <button onclick="sairSistema()" class="logout-btn">Sair</button>
+    </aside>
+
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Resumo geral da pizzaria</p>
+        </div>
+
+        <span class="user-badge">Admin</span>
+      </header>
+
+      <section class="cards-grid">
+        <div class="dash-card">
+          <span>💰</span>
+          <p>Faturamento Hoje</p>
+          <h2 id="faturamentoHoje">R$ 0,00</h2>
+        </div>
+
+        <div class="dash-card">
+          <span>🍕</span>
+          <p>Pedidos Hoje</p>
+          <h2 id="pedidosHoje">0</h2>
+        </div>
+
+        <div class="dash-card">
+          <span>🔥</span>
+          <p>Na Cozinha</p>
+          <h2 id="pedidosCozinha">0</h2>
+        </div>
+
+        <div class="dash-card">
+          <span>📦</span>
+          <p>Estoque Baixo</p>
+          <h2 id="estoqueBaixo">0</h2>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Últimos pedidos</h2>
+          <a href="pedidos.html">Novo pedido</a>
+        </div>
+
+        <div id="listaUltimosPedidos" class="order-list">
+          <p class="empty">Nenhum pedido lançado ainda.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mobile.js"></script>
+</body>
+</html>

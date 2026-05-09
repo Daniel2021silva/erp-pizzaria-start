@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa | ERP Pizzaria Start</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+<div class="app-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🍕 ERP Start</div>
+
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="cozinha.html">Cozinha</a>
+      <a href="estoque.html">Estoque</a>
+      <a class="active" href="caixa.html">Caixa</a>
+      <a href="clientes.html">Clientes</a>
+    </nav>
+
+    <button onclick="sairSistema()" class="logout-btn">Sair</button>
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div>
+        <h1>Caixa</h1>
+        <p>Resumo financeiro dos pedidos</p>
+      </div>
+    </header>
+
+    <section class="cards-grid">
+      <div class="dash-card">
+        <span>💰</span>
+        <p>Total vendido hoje</p>
+        <h2 id="totalHoje">R$ 0,00</h2>
+      </div>
+
+      <div class="dash-card">
+        <span>📲</span>
+        <p>Total Pix</p>
+        <h2 id="totalPix">R$ 0,00</h2>
+      </div>
+
+      <div class="dash-card">
+        <span>💵</span>
+        <p>Total Dinheiro</p>
+        <h2 id="totalDinheiro">R$ 0,00</h2>
+      </div>
+
+      <div class="dash-card">
+        <span>💳</span>
+        <p>Total Cartão</p>
+        <h2 id="totalCartao">R$ 0,00</h2>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Vendas do dia</h2>
+        <button onclick="fecharCaixa()" class="primary-btn">Fechar Caixa</button>
+      </div>
+
+      <div id="listaVendas" class="order-list"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/caixa.js"></script>
+<script src="js/mobile.js"></script>
+</body>
+</html>

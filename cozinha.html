@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozinha | ERP Pizzaria Start</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">🍕 ERP Start</div>
+
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a class="active" href="cozinha.html">Cozinha</a>
+        <a href="estoque.html">Estoque</a>
+        <a href="caixa.html">Caixa</a>
+        <a href="clientes.html">Clientes</a>
+      </nav>
+
+      <button onclick="sairSistema()" class="logout-btn">Sair</button>
+    </aside>
+
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <h1>Cozinha</h1>
+          <p>Controle os pedidos em preparo</p>
+        </div>
+      </header>
+
+      <section id="cozinhaGrid" class="kitchen-grid"></section>
+
+    </main>
+
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/cozinha.js"></script>
+
+</body>
+</html>

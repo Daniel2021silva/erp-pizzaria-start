@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque | ERP Pizzaria Start</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="app-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">🍕 ERP Start</div>
+
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="cozinha.html">Cozinha</a>
+        <a class="active" href="estoque.html">Estoque</a>
+        <a href="caixa.html">Caixa</a>
+        <a href="clientes.html">Clientes</a>
+      </nav>
+
+      <button onclick="sairSistema()" class="logout-btn">Sair</button>
+    </aside>
+
+    <main class="main-content">
+
+      <header class="topbar">
+        <div>
+          <h1>Estoque</h1>
+          <p>Controle de produtos e ingredientes</p>
+        </div>
+      </header>
+
+      <section class="form-panel">
+
+        <h2>Novo Produto</h2>
+
+        <form id="estoqueForm" class="erp-form">
+
+          <div class="form-grid">
+
+            <div>
+              <label>Produto</label>
+              <input type="text" id="produtoNome" placeholder="Ex: Pizza Calabresa" required>
+            </div>
+
+            <div>
+              <label>Quantidade</label>
+              <input type="number" id="produtoQuantidade" min="0" required>
+            </div>
+
+            <div>
+              <label>Custo</label>
+              <input type="number" id="produtoCusto" step="0.01" required>
+            </div>
+
+            <div>
+              <label>Valor Venda</label>
+              <input type="number" id="produtoVenda" step="0.01" required>
+            </div>
+
+          </div>
+
+          <button type="submit" class="primary-btn">
+            Adicionar Produto
+          </button>
+
+        </form>
+
+      </section>
+
+      <section class="panel">
+
+        <div class="panel-header">
+          <h2>Produtos cadastrados</h2>
+        </div>
+
+        <div id="listaEstoque" class="estoque-grid"></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/estoque.js"></script>
+  <script src="js/mobile.js"></script>
+
+</body>
+</html>
