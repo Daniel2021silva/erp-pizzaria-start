@@ -70,12 +70,22 @@
 
       <div id="listaVendas" class="order-list"></div>
     </section>
+<div class="backup-area">
+  <button onclick="exportarBackup()" class="btn-backup">
+    Exportar Backup
+  </button>
 
+  <label class="btn-backup">
+    Importar Backup
+    <input type="file" accept=".json" onchange="importarBackup(event)" hidden>
+  </label>
+</div>
   </main>
 </div>
 
 <script src="js/storage.js"></script>
 <script src="js/caixa.js"></script>
 <script src="js/mobile.js"></script>
+<script src="js/backup.js"></script>
 </body>
 </html>

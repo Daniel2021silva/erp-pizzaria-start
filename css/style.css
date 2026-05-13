@@ -755,3 +755,26 @@ body {
     padding-top: 80px;
   }
 }
+
+.backup-area {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.btn-backup {
+  background: #111827;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.btn-backup:hover {
+  background: #f59e0b;
+  color: #111827;
+}

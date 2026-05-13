@@ -1,0 +1,17 @@
+ERP PIZZARIA START
+
+INSTRUÇÕES:
+
+1. Extraia o arquivo ZIP.
+2. Abra a pasta do sistema.
+3. Execute o arquivo index.html no navegador.
+
+RECURSOS:
+- Pedidos
+- Cozinha
+- Estoque
+- Caixa
+- Clientes
+
+SUPORTE:
+Contato do produtor.
